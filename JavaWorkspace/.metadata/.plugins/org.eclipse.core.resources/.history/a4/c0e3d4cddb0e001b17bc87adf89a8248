@@ -1,0 +1,27 @@
+package hw;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.temporal.TemporalAdjusters;
+
+public class hw2 {
+
+	public static void main(String[] args) {
+		LocalDate nowDate = LocalDate.now();
+	     LocalDate firstDayOfYear = nowDate.with(TemporalAdjusters.firstDayOfYear());  //今年第一天
+	    LocalDate lastDayOfYear = nowDate.with(TemporalAdjusters.lastDayOfYear());  //今年最後一天
+	    LocalDateTime firstDateOfYear = LocalDateTime.of(firstDayOfYear, LocalTime.MIN);
+		
+		LocalDate now = LocalDate.now(); //現在年月日
+		
+		System.out.println("現在年月日 : "+now);
+		System.out.println("今年第一天 : "+firstDayOfYear);
+		System.out.println("今年最後一天 : "+lastDayOfYear);
+		System.out.println("現在年月日 : "+firstDateOfYear);
+		
+		
+
+	}
+
+}
